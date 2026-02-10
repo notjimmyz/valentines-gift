@@ -242,6 +242,57 @@
   animation: fadeIn 1s ease-in 0.5s both;
 }
 
+.choice-screen {
+  animation: fadeIn 0.5s ease-in;
+  text-align: center;
+}
+
+.choice-title {
+  font-size: 3rem;
+  color: #d63384;
+  margin-bottom: 3rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.choice-buttons,
+.cuisine-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  position: relative;
+}
+
+.cuisine-buttons {
+  gap: 1.5rem;
+}
+
+.choice-btn,
+.cuisine-btn {
+  pointer-events: auto;
+}
+
+.cuisine-btn {
+  background: linear-gradient(135deg, #ff6b9d 0%, #ff8fab 100%) !important;
+  color: white !important;
+}
+
+.cuisine-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(255, 107, 157, 0.4);
+}
+
+.itinerary-subtitle {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 2rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
 .itinerary-page {
   animation: fadeIn 0.5s ease-in;
   max-width: 800px;
@@ -287,6 +338,26 @@
 
 .itinerary-item:nth-child(4) {
   animation-delay: 0.4s;
+}
+
+.itinerary-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.itinerary-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.itinerary-item:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.itinerary-item:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.itinerary-item:nth-child(9) {
+  animation-delay: 0.9s;
 }
 
 .itinerary-item:hover {
@@ -375,5 +446,13 @@
   
   .otter-hint {
     font-size: 1rem;
+  }
+  
+  .choice-title {
+    font-size: 2.2rem;
+  }
+  
+  .itinerary-subtitle {
+    font-size: 1.2rem;
   }
 }
