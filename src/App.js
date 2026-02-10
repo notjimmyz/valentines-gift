@@ -111,7 +111,7 @@ function App() {
     };
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [flow, noPosition, outdoorPosition, mexicanPosition]);
+  }, [flow, noPosition, outdoorPosition, mexicanPosition, outdoorButtonRef, mexicanButtonRef, setOutdoorPosition, setMexicanPosition]);
 
   const moveDodgingButton = (setPos) => {
     const randomX = BUTTON_PADDING + Math.random() * (window.innerWidth - BUTTON_WIDTH - BUTTON_PADDING * 2);
