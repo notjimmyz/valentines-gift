@@ -1,0 +1,379 @@
+.valentine-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #ffeef8 0%, #fff5e6 50%, #e8f4f8 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Comic Sans MS', 'Marker Felt', 'Chalkboard SE', cursive, sans-serif;
+}
+
+.otter-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.otter {
+  position: absolute;
+  font-size: 4rem;
+  animation: float 3s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.otter-1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.otter-2 {
+  top: 20%;
+  right: 15%;
+  animation-delay: 0.5s;
+}
+
+.otter-3 {
+  bottom: 15%;
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.otter-4 {
+  bottom: 25%;
+  right: 10%;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.valentine-title {
+  font-size: 3.5rem;
+  color: #d63384;
+  margin-bottom: 3rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s ease-in-out infinite;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.buttons-container {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  width: 100%;
+}
+
+.button {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', 'Marker Felt', 'Chalkboard SE', cursive, sans-serif;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.yes-button {
+  background: linear-gradient(135deg, #ff6b9d 0%, #ff8fab 100%);
+  color: white;
+  transform: scale(1);
+  pointer-events: auto;
+  position: relative;
+}
+
+.yes-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(255, 107, 157, 0.4);
+  background: linear-gradient(135deg, #ff8fab 0%, #ff6b9d 100%);
+}
+
+.yes-button:active {
+  transform: scale(0.95);
+}
+
+.no-button {
+  background: linear-gradient(135deg, #a0a0a0 0%, #c0c0c0 100%);
+  color: white;
+  z-index: 10;
+  pointer-events: auto;
+  margin: 0;
+}
+
+.no-button:hover {
+  background: linear-gradient(135deg, #c0c0c0 0%, #a0a0a0 100%);
+  animation: bounce-edge 0.3s ease-out;
+}
+
+@keyframes bounce-edge {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.success-message {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-title {
+  font-size: 4rem;
+  color: #ff6b9d;
+  margin-bottom: 1.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.success-text {
+  font-size: 2rem;
+  color: #d63384;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.celebration-otters {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.celebration-otter {
+  font-size: 5rem;
+  animation: celebrate 1s ease-in-out infinite;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+.celebration-otter:hover {
+  transform: scale(1.2) rotate(15deg);
+  animation-play-state: paused;
+}
+
+.celebration-otter:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.celebration-otter:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.celebration-otter:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes celebrate {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-20px) rotate(-10deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(-30px) rotate(10deg) scale(1.2);
+  }
+  75% {
+    transform: translateY(-20px) rotate(-5deg) scale(1.1);
+  }
+}
+
+.otter-hint {
+  font-size: 1.2rem;
+  color: #d63384;
+  margin-top: 1.5rem;
+  font-style: italic;
+  opacity: 0.8;
+  animation: fadeIn 1s ease-in 0.5s both;
+}
+
+.itinerary-page {
+  animation: fadeIn 0.5s ease-in;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.itinerary-title {
+  font-size: 3.5rem;
+  color: #d63384;
+  margin-bottom: 3rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.itinerary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.itinerary-item {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.6s ease-out both;
+}
+
+.itinerary-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.itinerary-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.itinerary-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.itinerary-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.itinerary-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.itinerary-time {
+  font-size: 1.8rem;
+  color: #ff6b9d;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.itinerary-activity {
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.itinerary-otters {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.itinerary-otter {
+  font-size: 4rem;
+  animation: float 3s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.itinerary-otter:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.itinerary-otter:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.itinerary-otter:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .valentine-title {
+    font-size: 2.5rem;
+  }
+  
+  .button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .success-title {
+    font-size: 3rem;
+  }
+  
+  .success-text {
+    font-size: 1.5rem;
+  }
+  
+  .itinerary-title {
+    font-size: 2.5rem;
+  }
+  
+  .itinerary-time {
+    font-size: 1.5rem;
+  }
+  
+  .itinerary-activity {
+    font-size: 1.2rem;
+  }
+  
+  .otter-hint {
+    font-size: 1rem;
+  }
+}
